@@ -17,6 +17,7 @@ class NetworkDataFetcher {
                 do {
                     let movies = try JSONDecoder().decode(T.self, from: data)
                     response(movies)
+                    print("decode: OK")
                 } catch let jsonError {
                     print("Failed do decode JSON: ", jsonError)
                 }
@@ -25,26 +26,5 @@ class NetworkDataFetcher {
                 response(nil)
             }
         }
-//        do {
-//            let movies = try JSONDecoder().decode(T.self, from: data)
-//            completion(.success(movies))
-//        } catch let jsonError {
-//            completion(.failure(jsonError))
-//        }
-        
-        
-        
-        
-//        let net = NetworkService()
-//        net.request(urlString: "https://kinopoiskapiunofficial.tech/api/v2.2/films?order=\(sortBy)&type=FILM&ratingFrom=5&ratingTo=10&yearFrom=1985&yearTo=2022&page=1", completion:  { (result: Result<MovieRatingResponse, Error>) in
-//            switch result {
-//            case .success(let movieRatingResponse):
-//                self.movieRatingResponse = movieRatingResponse
-//                self.moviesList.reloadData()
-//            case .failure(_):
-//                print("error:", result)
-//            }
-//
-//        })
     }
 }

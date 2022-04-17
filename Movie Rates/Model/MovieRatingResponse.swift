@@ -16,6 +16,6 @@ struct MovieRatingResponse: Decodable {
 struct Movie: Decodable {
     var kinopoiskId: Int
     var nameRu: String?
-    var year: Int
+    var year: UInt
     var posterUrlPreview: String
 }

@@ -11,11 +11,11 @@ struct MovieResponse: Decodable {
     var posterUrlPreview: String
     
     var nameRu: String
-    var slogan: String
-    var description: String
-    var shortDescription: String
+    var slogan: String?
+    var description: String?
+    var shortDescription: String?
     var year: UInt
     
-    var ratingKinopoisk: Double
-    var ratingKinopoiskVoteCount: Int
+    var ratingKinopoisk: Double?
+    var ratingKinopoiskVoteCount: Int?
 }

@@ -17,7 +17,9 @@ class ViewController: UIViewController {
     struct Cells {
         static let imageCell = "ImageCell"
     }
-    
+    struct Segues {
+        static let movieCardSegue = "ShowMovieCard"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +27,17 @@ class ViewController: UIViewController {
         configureTable()
         getMovies()
     }
-
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Segues.movieCardSegue {
+            if let destination = segue.destination as? MovieCardViewController {
+                let movieId = sender as? UInt
+                print(movieId ?? "Sender error")
+                destination.movieId = movieId
+            }
+        }
+    }
+    
     
 // MARK: - UITableView configuration
     func configureTable() {
@@ -64,7 +75,6 @@ class ViewController: UIViewController {
         }
     }
     
-    
 }
 
 
@@ -82,6 +92,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movieId = movieRatingResponse?.items[indexPath.row].kinopoiskId
+        self.performSegue(withIdentifier: Segues.movieCardSegue, sender: movieId)
+    }
 }
 
 

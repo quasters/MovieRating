@@ -18,6 +18,7 @@
 		D1FC1592280A402900120F19 /* MovieRatingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FC1591280A402900120F19 /* MovieRatingResponse.swift */; };
 		D1FC1594280AEEE300120F19 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FC1593280AEEE300120F19 /* NetworkDataFetcher.swift */; };
 		D1FC1598280B284600120F19 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FC1597280B284600120F19 /* ImageCell.swift */; };
+		D1FC159B280C2A2E00120F19 /* MovieCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FC159A280C2A2E00120F19 /* MovieCardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		D1FC1591280A402900120F19 /* MovieRatingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRatingResponse.swift; sourceTree = "<group>"; };
 		D1FC1593280AEEE300120F19 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		D1FC1597280B284600120F19 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		D1FC159A280C2A2E00120F19 /* MovieCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,12 +68,12 @@
 		D116C8FE2809ED9B00BF5B4C /* Movie Rates */ = {
 			isa = PBXGroup;
 			children = (
+				D1FC1599280C29C800120F19 /* Controllers */,
 				D1B2FDE3280A180900D29DBD /* Network */,
 				D1B2FDE0280A176B00D29DBD /* Model */,
-				D116C8FF2809ED9B00BF5B4C /* AppDelegate.swift */,
 				D1FC1597280B284600120F19 /* ImageCell.swift */,
+				D116C8FF2809ED9B00BF5B4C /* AppDelegate.swift */,
 				D116C9012809ED9B00BF5B4C /* SceneDelegate.swift */,
-				D116C9032809ED9B00BF5B4C /* ViewController.swift */,
 				D116C9052809ED9B00BF5B4C /* Main.storyboard */,
 				D116C9082809ED9D00BF5B4C /* Assets.xcassets */,
 				D116C90A2809ED9D00BF5B4C /* LaunchScreen.storyboard */,
@@ -96,6 +98,15 @@
 				D1FC1593280AEEE300120F19 /* NetworkDataFetcher.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		D1FC1599280C29C800120F19 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D116C9032809ED9B00BF5B4C /* ViewController.swift */,
+				D1FC159A280C2A2E00120F19 /* MovieCardViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +185,7 @@
 				D1B2FDE2280A180000D29DBD /* NetworkService.swift in Sources */,
 				D116C9042809ED9B00BF5B4C /* ViewController.swift in Sources */,
 				D1B2FDDF280A136500D29DBD /* MovieResponse.swift in Sources */,
+				D1FC159B280C2A2E00120F19 /* MovieCardViewController.swift in Sources */,
 				D1FC1598280B284600120F19 /* ImageCell.swift in Sources */,
 				D116C9002809ED9B00BF5B4C /* AppDelegate.swift in Sources */,
 				D116C9022809ED9B00BF5B4C /* SceneDelegate.swift in Sources */,
