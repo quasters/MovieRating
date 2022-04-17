@@ -17,5 +17,11 @@ struct Movie: Decodable {
     var kinopoiskId: Int
     var nameRu: String?
     var year: UInt
+    
     var posterUrlPreview: String
+    var description: String?
+    var shortDescription: String?
+    
+    var ratingKinopoisk: Double?
+    var ratingKinopoiskVoteCount: Int?
 }

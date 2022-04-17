@@ -31,9 +31,9 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Segues.movieCardSegue {
             if let destination = segue.destination as? MovieCardViewController {
-                let movieId = sender as? UInt
-                print(movieId ?? "Sender error")
-                destination.movieId = movieId
+                let movie = sender as? Movie
+                print(movie ?? "Sender error")
+                destination.movie = movie
             }
         }
     }
@@ -93,9 +93,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let movieId = movieRatingResponse?.items[indexPath.row].kinopoiskId
-        self.performSegue(withIdentifier: Segues.movieCardSegue, sender: movieId)
+        let movieRatingResponse = movieRatingResponse?.items[indexPath.row]
+        self.performSegue(withIdentifier: Segues.movieCardSegue, sender: movieRatingResponse)
+        self.moviesList.deselectRow(at: indexPath, animated: false)
     }
+
 }
 
 
