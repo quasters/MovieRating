@@ -27,6 +27,10 @@ final class ImageCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func prepareForReuse() {
+         posterImageView.image = nil
+     }
+    
     func set(movies: MovieRatingResponse, index: Int) {
         let movieItem = movies.items[index]
         

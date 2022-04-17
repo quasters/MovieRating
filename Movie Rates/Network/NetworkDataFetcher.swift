@@ -17,7 +17,6 @@ class NetworkDataFetcher {
                 do {
                     let movies = try JSONDecoder().decode(T.self, from: data)
                     response(movies)
-                    print("decode: OK")
                 } catch let jsonError {
                     print("Failed do decode JSON: ", jsonError)
                 }

@@ -27,7 +27,6 @@ class NetworkService {
                     completion(.failure(error))
                 }
                 guard let data = data else { return }
-                print("getting data: OK")
                 completion(.success(data))
             }
         }.resume()
